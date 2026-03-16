@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Your Small Business Needs a Professional Website in 2026 — Omanyi Media</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .post-hero {
+      padding-top: var(--nav-h);
+      background: linear-gradient(135deg, #C8EDEB 0%, #85C1BF 100%);
+      padding: calc(var(--nav-h) + 4rem) 6% 5rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .post-category {
+      background: var(--teal); color: white;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; font-family: 'DM Mono', monospace;
+      padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .post-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900; line-height: 1.15; letter-spacing: -0.025em;
+      color: var(--ink); margin-bottom: 1rem;
+    }
+    .post-meta {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      font-size: 0.85rem; color: var(--ink-soft);
+    }
+    .post-meta span { display: flex; align-items: center; gap: 0.35rem; }
+    .post-visual {
+      background: white; border-radius: 20px;
+      height: 320px; display: flex; align-items: center; justify-content: center;
+      font-size: 6rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+
+    /* ── ARTICLE ── */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start;
+    }
+
+    article { max-width: 100%; }
+    .article-intro {
+      font-size: 1.15rem; font-weight: 400; color: var(--ink-soft);
+      line-height: 1.85; margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem; border-bottom: 1px solid var(--border);
+    }
+    article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem; font-weight: 700;
+      color: var(--ink); margin: 2.5rem 0 1rem; letter-spacing: -0.015em;
+    }
+    article p {
+      font-size: 1.02rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 1.25rem;
+    }
+    article ul {
+      padding-left: 1.25rem; margin-bottom: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    article ul li { font-size: 0.97rem; color: var(--ink-soft); line-height: 1.75; }
+
+    .pull-quote {
+      background: var(--teal-pale); border-left: 4px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 2rem; margin: 2rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-style: italic; color: var(--teal-dark);
+      line-height: 1.55; margin: 0;
+    }
+
+    .keywords-strip {
+      background: var(--mist); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .keywords-strip h4 { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.6rem; }
+    .kw-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .kw-pill {
+      background: white; border: 1px solid var(--border);
+      color: var(--ink-soft); font-size: 0.78rem;
+      padding: 0.28rem 0.7rem; border-radius: 20px;
+    }
+
+    /* ── CTA BOX ── */
+    .article-cta {
+      background: var(--teal); color: white;
+      border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem;
+    }
+    .article-cta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;
+    }
+    .article-cta p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 300; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .sidebar-card {
+      background: var(--mist); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem;
+    }
+    .sidebar-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem; color: var(--ink); }
+    .toc-link {
+      display: block; font-size: 0.85rem; color: var(--ink-soft);
+      padding: 0.4rem 0; border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--teal); }
+    .related-post {
+      display: flex; gap: 0.75rem; padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .related-post:last-child { border-bottom: none; }
+    .rp-thumb {
+      width: 56px; height: 56px; border-radius: 10px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      background: linear-gradient(135deg, #FFF3D4, #F5D98A);
+    }
+    .rp-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .rp-cat { font-size: 0.75rem; color: var(--teal); margin-top: 0.2rem; }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.85rem; font-weight: 600; color: var(--teal);
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Omanyi<span>.</span>Media</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="landing.html" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+</nav>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="fade-up">
+    <span class="post-category">Websites</span>
+    <h1>Why Your Small Business Needs a Professional Website in 2026</h1>
+    <div class="post-meta">
+      <span>✍️ Jordan Omanyi</span>
+      <span>📅 March 2026</span>
+      <span>⏱️ 8 min read</span>
+    </div>
+  </div>
+  <div class="post-visual fade-up delay-2">🌐</div>
+</div>
+
+<!-- ARTICLE -->
+<section class="section">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+
+  <div class="article-layout">
+    <article>
+      <!-- Keywords -->
+      <div class="keywords-strip">
+        <h4>🎯 Target Keywords</h4>
+        <div class="kw-list">
+          <span class="kw-pill">small business website</span>
+          <span class="kw-pill">professional web design</span>
+          <span class="kw-pill">website for local business</span>
+          <span class="kw-pill">online presence for small business</span>
+          <span class="kw-pill">affordable website</span>
+        </div>
+      </div>
+
+      <p class="article-intro">You have a great product. You offer an outstanding service. Your customers love you — the ones who have actually found you. But here is the hard truth: if your business does not have a professional website in 2026, a significant portion of your potential customers will never know you exist.</p>
+
+      <p>This is not an exaggeration. Studies consistently show that over 80% of consumers research a business online before making a purchase or booking a service. If they land on a poorly designed site — or worse, find nothing at all — they move on to your competitor in seconds.</p>
+
+      <h2>The Digital Storefront: Your First Impression Happens Online</h2>
+
+      <p>Think about the last time you visited a new restaurant or hired a contractor. Chances are, you looked them up online first. You checked their website, scanned their photos, maybe read a review or two. Your potential customers are doing exactly the same thing when they hear about your business.</p>
+
+      <p>A professional website is your digital storefront. It works 24 hours a day, 7 days a week, 365 days a year — even when your physical location is closed. It tells your story, showcases your work, and gives visitors a reason to trust you before they ever pick up the phone or walk through your door.</p>
+
+      <div class="pull-quote">
+        <p>A professional website is not an expense. It is the most efficient salesperson your business will ever have — one that works around the clock and never calls in sick.</p>
+      </div>
+
+      <p>But not just any website will do. A poorly built website can actually hurt you more than having no website at all. Slow load times, broken links, confusing navigation, and low-quality images signal to visitors — and to Google — that your business is not to be taken seriously.</p>
+
+      <h2>What Makes a Website 'Professional'?</h2>
+
+      <p>Many small business owners assume that building a professional website requires a large budget or advanced technical skills. That is no longer true. What it does require is intentional design and clear communication. Here are the core elements every professional small business website should include:</p>
+
+      <ul>
+        <li><strong>Clear value proposition:</strong> Within seconds of landing on your homepage, visitors should understand exactly what you do and why they should choose you.</li>
+        <li><strong>Mobile responsiveness:</strong> More than half of web traffic now comes from smartphones. A website that does not look great on mobile is losing you customers daily.</li>
+        <li><strong>Fast load times:</strong> A site that takes more than three seconds to load will lose a significant portion of visitors before they even see your content.</li>
+        <li><strong>Easy navigation:</strong> Visitors should be able to find what they need — services, pricing, contact information — within two or three clicks.</li>
+        <li><strong>Call-to-action (CTA):</strong> Every page should guide the visitor toward the next step, whether that is booking a call, requesting a quote, or signing up for your newsletter.</li>
+        <li><strong>Trust signals:</strong> Testimonials, case studies, certifications, and professional photos all help build credibility and reduce purchase hesitation.</li>
+      </ul>
+
+      <h2>The SEO Advantage: Getting Found on Google</h2>
+
+      <p>Beyond impressing your existing audience, a well-built website is one of the most powerful tools for attracting new customers through search engines. Search Engine Optimization (SEO) is the practice of structuring and writing your website so that Google ranks it higher when people search for services like yours.</p>
+
+      <p>For a local bakery, that might mean showing up when someone searches "best bakery in [your city]." For a plumber, it could mean appearing for "emergency plumber near me." The businesses that dominate those local search results are capturing customers who are actively ready to spend money right now.</p>
+
+      <p>Good SEO starts with a professional website. That means clean code, fast load speeds, descriptive page titles and headings, well-written content, and relevant keywords woven naturally throughout your site — exactly like the target keywords listed at the top of this article.</p>
+
+      <h2>The Cost of Not Having a Website</h2>
+
+      <p>Some small business owners rely on social media instead of a website. While platforms like Instagram and Facebook are valuable tools for engagement and discovery, they carry significant risks as a primary online presence:</p>
+
+      <ul>
+        <li>You do not own your social media profile. The platform can change its algorithm, restrict your reach, or even shut down.</li>
+        <li>Social profiles are difficult to rank on search engines compared to a dedicated website.</li>
+        <li>Limited customization means it is harder to tell your full brand story and showcase your products or services in depth.</li>
+      </ul>
+
+      <p>A website, on the other hand, is a digital asset you own. It compounds in value over time as your content grows, your SEO improves, and your brand becomes more established online.</p>
+
+      <h2>Getting Started Does Not Have to Be Overwhelming</h2>
+
+      <p>The biggest barrier most small business owners face is not the cost — it is knowing where to start. Working with a professional media company that specializes in website design for small businesses means you get expert guidance throughout the entire process, from choosing your domain name and structuring your pages to writing copy that converts visitors into customers.</p>
+
+      <p>A great web partner will not just hand you a pretty website. They will take the time to understand your business goals, your target audience, and your competitive landscape before a single line of code is written. The result is a site built with purpose — one that grows your business, not just your online presence.</p>
+
+      <p>In today's marketplace, your website is often the deciding factor between a customer choosing you or your competitor. The question is not whether you can afford a professional website. The question is whether you can afford not to have one.</p>
+
+      <!-- CTA -->
+      <div class="article-cta">
+        <h3>Ready to Give Your Small Business the Online Presence It Deserves?</h3>
+        <p>Book a free 30-minute consultation with the Omanyi Media team. We'll talk through your goals and show you exactly what a professional website could do for your business — no commitment required.</p>
+        <a href="landing.html" class="btn-white">Claim My Free Consultation →</a>
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-title">📋 Table of Contents</div>
+        <a href="#" class="toc-link">The Digital Storefront</a>
+        <a href="#" class="toc-link">What Makes a Website Professional</a>
+        <a href="#" class="toc-link">The SEO Advantage</a>
+        <a href="#" class="toc-link">Cost of Not Having a Website</a>
+        <a href="#" class="toc-link">Getting Started</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">📚 Related Article</div>
+        <div class="related-post">
+          <div class="rp-thumb">🎬</div>
+          <div>
+            <div class="rp-title">5 Signs Your Business Video Content Is Hurting You</div>
+            <div class="rp-cat"><a href="blog-post-2.html" style="color:var(--teal);">Read Article →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card" style="background:var(--teal);border-color:var(--teal);color:white;">
+        <div class="sidebar-title" style="color:rgba(255,255,255,0.8);">🚀 Free Resource</div>
+        <p style="font-size:0.85rem;line-height:1.6;margin-bottom:1rem;opacity:0.85;">Download the <strong>Small Business Digital Starter Kit</strong> — a free guide to getting found online and looking professional.</p>
+        <a href="landing.html" class="btn-white" style="font-size:0.85rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Download Free →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo">Omanyi<span>.</span>Media</a>
+      <p class="footer-tagline">Professional websites and video content for small businesses across Canada and the United States.</p>
+      <div class="social-row">
+        <div class="social-btn">f</div><div class="social-btn">in</div>
+        <div class="social-btn">li</div><div class="social-btn">▶</div><div class="social-btn">𝕏</div>
+      </div>
+    </div>
+    <div><div class="footer-col-title">Company</div>
+      <ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div><div class="footer-col-title">Services</div>
+      <ul class="footer-links"><li><a href="services.html">Website Building</a></li><li><a href="services.html">Video Production</a></li><li><a href="landing.html">Free Consultation</a></li></ul>
+    </div>
+    <div><div class="footer-col-title">Contact</div>
+      <ul class="footer-links"><li><a href="mailto:hello@omanyi.media">hello@omanyi.media</a></li><li><a href="tel:+14165550192">+1 (416) 555-0192</a></li><li><a href="#">200 Wellington St W, Toronto ON</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Omanyi Media. All rights reserved.</span><span>Toronto, Ontario · Canada</span></div>
+</footer>
+<div class="disclaimer-bar">The information provided on this website is intended for educational purposes only. While every effort has been made to ensure the accuracy and reliability of the content, the university does not guarantee its completeness or effectiveness. This website will be deactivated once the course is completed. Some images used on this site have been sourced from the internet and are included for educational and practice purposes only. If you are the copyright owner of any image and believe it has been used without proper attribution, please contact us, and we will make the necessary corrections. The views expressed on this site do not necessarily reflect the official policies or positions of the university. The university is not responsible for any errors or omissions or the results obtained from using this information. By using this website, you acknowledge and agree to these terms.</div>
+<script src="js/main.js"></script>
+</body>
+</html>
