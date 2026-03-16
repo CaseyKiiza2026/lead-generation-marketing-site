@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Omanyi Media</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      padding-top: var(--nav-h);
+      background: var(--teal-dark);
+      padding: calc(var(--nav-h) + 4rem) 6% 5rem;
+      color: white; text-align: center;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900; line-height: 1.1; letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+    }
+    .page-hero p { font-size: 1.1rem; opacity: 0.8; font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
+    }
+
+    /* ── INFO SIDE ── */
+    .contact-info-item {
+      display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem;
+    }
+    .ci-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--teal-pale); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+    }
+    .ci-label { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .ci-value { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; }
+    .ci-value a { color: var(--teal); }
+
+    .hours-table { margin-top: 1rem; }
+    .hours-row {
+      display: flex; justify-content: space-between;
+      font-size: 0.88rem; padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { font-weight: 600; }
+    .hours-time { color: var(--ink-soft); }
+
+    .social-row { display: flex; gap: 0.6rem; margin-top: 2rem; }
+    .social-btn {
+      width: 44px; height: 44px; border: 1.5px solid var(--border);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; cursor: pointer; transition: all 0.2s; color: var(--ink-soft);
+      background: transparent; font-weight: 700;
+    }
+    .social-btn:hover { background: var(--teal); border-color: var(--teal); color: white; }
+
+    /* ── MAP PLACEHOLDER ── */
+    .map-box {
+      background: var(--mist); border: 1px solid var(--border);
+      border-radius: 14px; height: 200px; margin-top: 2.5rem;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.5rem; color: var(--ink-soft); text-align: center; padding: 1rem;
+    }
+    .map-box span { font-size: 2rem; }
+    .map-box p { font-size: 0.88rem; font-weight: 500; }
+    .map-box small { font-size: 0.78rem; opacity: 0.7; }
+
+    /* ── FORM SIDE ── */
+    .contact-form-wrap {
+      background: var(--mist); border: 1px solid var(--border);
+      border-radius: 24px; padding: 2.75rem;
+    }
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700; margin-bottom: 0.4rem;
+    }
+    .form-sub { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 2rem; }
+
+    .submit-btn {
+      width: 100%; padding: 1rem; background: var(--teal);
+      color: white; border: none; border-radius: 9px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      transition: background 0.2s; margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: var(--teal-dark); }
+
+    .form-note { font-size: 0.78rem; color: var(--ink-soft); text-align: center; margin-top: 0.75rem; }
+
+    /* ── ALTERNATIVE CTA ── */
+    .alt-cta {
+      background: var(--teal-pale); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      display: flex; align-items: center; gap: 1rem; margin-top: 2rem;
+    }
+    .alt-cta-icon { font-size: 1.8rem; }
+    .alt-cta-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; }
+    .alt-cta-text strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Omanyi<span>.</span>Media</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="landing.html" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label" style="color:rgba(255,255,255,0.6);justify-content:center;">Get In Touch</div>
+  <h1>Let's Talk About<br>Your Business.</h1>
+  <p>Send us a message, call us, or book a free consultation. We respond to all inquiries within 1 business day.</p>
+</div>
+
+<section class="section">
+  <div class="contact-layout">
+
+    <!-- LEFT: INFO -->
+    <div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:2rem;">Our Contact Details</h2>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">📞</div>
+        <div>
+          <div class="ci-label">Phone</div>
+          <div class="ci-value"><a href="tel:+14165550192">+1 (416) 555-0192</a></div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon">✉️</div>
+        <div>
+          <div class="ci-label">Email</div>
+          <div class="ci-value"><a href="mailto:hello@omanyi.media">hello@omanyi.media</a></div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon">📍</div>
+        <div>
+          <div class="ci-label">Office Address</div>
+          <div class="ci-value">200 Wellington Street West, Suite 410<br>Toronto, Ontario, M5V 3C7<br>Canada</div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <div class="ci-label" style="margin-bottom:0.5rem;">Business Hours</div>
+        <div class="hours-table">
+          <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">9:00 AM – 5:30 PM EST</span></div>
+          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">By appointment</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <div class="ci-label" style="margin-bottom:0.75rem;">Follow Us</div>
+        <div class="social-row">
+          <div class="social-btn" title="Facebook">f</div>
+          <div class="social-btn" title="Instagram">IG</div>
+          <div class="social-btn" title="LinkedIn">in</div>
+          <div class="social-btn" title="YouTube">▶</div>
+          <div class="social-btn" title="X">𝕏</div>
+        </div>
+      </div>
+
+      <div class="map-box">
+        <span>🗺️</span>
+        <p>200 Wellington St W, Suite 410, Toronto ON</p>
+        <small>Embedded Google Map — available on live website</small>
+      </div>
+
+      <div class="alt-cta">
+        <div class="alt-cta-icon">⚡</div>
+        <div class="alt-cta-text">
+          <strong>Want a faster response?</strong><br>
+          Book your free 30-minute consultation directly — <a href="landing.html" style="color:var(--teal);font-weight:600;">click here to get started.</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form-wrap">
+      <div class="form-title">Send Us a Message</div>
+      <p class="form-sub">Fill out the form below and we'll get back to you within 1 business day.</p>
+
+      <form action="thank-you.html" method="get" onsubmit="return true;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="jane@mybusiness.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (416) 555-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bizname">Business Name</label>
+          <input type="text" id="bizname" name="bizname" placeholder="My Awesome Business">
+        </div>
+        <div class="form-group">
+          <label for="service">Service of Interest *</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option>Website Package</option>
+            <option>Video Production</option>
+            <option>Both Website &amp; Video</option>
+            <option>Other / Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message / Project Description *</label>
+          <textarea id="message" name="message" placeholder="Tell us about your business and what you're looking to achieve..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send My Message →</button>
+        <p class="form-note">🔒 Your information is safe with us. We will never share or sell your data.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo">Omanyi<span>.</span>Media</a>
+      <p class="footer-tagline">Professional websites and video content for small businesses across Canada and the United States.</p>
+      <div class="social-row">
+        <div class="social-btn">f</div><div class="social-btn">in</div>
+        <div class="social-btn">li</div><div class="social-btn">▶</div><div class="social-btn">𝕏</div>
+      </div>
+    </div>
+    <div><div class="footer-col-title">Company</div>
+      <ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div><div class="footer-col-title">Services</div>
+      <ul class="footer-links"><li><a href="services.html">Website Building</a></li><li><a href="services.html">Video Production</a></li><li><a href="landing.html">Free Consultation</a></li></ul>
+    </div>
+    <div><div class="footer-col-title">Contact</div>
+      <ul class="footer-links"><li><a href="mailto:hello@omanyi.media">hello@omanyi.media</a></li><li><a href="tel:+14165550192">+1 (416) 555-0192</a></li><li><a href="#">200 Wellington St W, Toronto ON</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Omanyi Media. All rights reserved.</span><span>Toronto, Ontario · Canada</span></div>
+</footer>
+<div class="disclaimer-bar">The information provided on this website is intended for educational purposes only. While every effort has been made to ensure the accuracy and reliability of the content, the university does not guarantee its completeness or effectiveness. This website will be deactivated once the course is completed. Some images used on this site have been sourced from the internet and are included for educational and practice purposes only. If you are the copyright owner of any image and believe it has been used without proper attribution, please contact us, and we will make the necessary corrections. The views expressed on this site do not necessarily reflect the official policies or positions of the university. The university is not responsible for any errors or omissions or the results obtained from using this information. By using this website, you acknowledge and agree to these terms.</div>
+<script src="js/main.js"></script>
+</body>
+</html>
