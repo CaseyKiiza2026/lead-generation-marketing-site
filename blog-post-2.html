@@ -1,0 +1,289 @@
+Blog post 2 · HTML
+Copy
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Signs Your Business Video Content Is Hurting You — Omanyi Media</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .post-hero {
+      padding-top: var(--nav-h);
+      background: linear-gradient(135deg, #FFF3D4 0%, #F5D98A 100%);
+      padding: calc(var(--nav-h) + 4rem) 6% 5rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .post-category {
+      background: var(--gold); color: var(--ink);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; font-family: 'DM Mono', monospace;
+      padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .post-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900; line-height: 1.15; letter-spacing: -0.025em;
+      color: var(--ink); margin-bottom: 1rem;
+    }
+    .post-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--ink-soft); }
+    .post-meta span { display: flex; align-items: center; gap: 0.35rem; }
+    .post-visual {
+      background: white; border-radius: 20px; height: 320px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+ 
+    /* ── ARTICLE ── */
+    .article-layout { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start; }
+    article { max-width: 100%; }
+    .article-intro {
+      font-size: 1.15rem; font-weight: 400; color: var(--ink-soft);
+      line-height: 1.85; margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem; border-bottom: 1px solid var(--border);
+    }
+    article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem; font-weight: 700; color: var(--ink);
+      margin: 2.5rem 0 1rem; letter-spacing: -0.015em;
+    }
+    article p { font-size: 1.02rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 1.25rem; }
+    article ul { padding-left: 1.25rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    article ul li { font-size: 0.97rem; color: var(--ink-soft); line-height: 1.75; }
+ 
+    .numbered-sign {
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      background: var(--mist); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.75rem; margin: 2.5rem 0;
+    }
+    .sign-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem; font-weight: 900; color: var(--teal);
+      line-height: 1; flex-shrink: 0;
+    }
+    .sign-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .sign-body p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.75; margin: 0; }
+ 
+    .pull-quote {
+      background: #FFF8E6; border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 2rem; margin: 2rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-style: italic; color: var(--ink);
+      line-height: 1.55; margin: 0;
+    }
+ 
+    .keywords-strip {
+      background: var(--mist); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.25rem; margin-bottom: 2.5rem;
+    }
+    .keywords-strip h4 { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.6rem; }
+    .kw-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .kw-pill { background: white; border: 1px solid var(--border); color: var(--ink-soft); font-size: 0.78rem; padding: 0.28rem 0.7rem; border-radius: 20px; }
+ 
+    .article-cta {
+      background: var(--teal-dark); color: white;
+      border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem;
+    }
+    .article-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .article-cta p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 300; }
+ 
+    .sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .sidebar-card { background: var(--mist); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem; color: var(--ink); }
+    .toc-link { display: block; font-size: 0.85rem; color: var(--ink-soft); padding: 0.4rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--teal); }
+    .related-post { display: flex; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+    .related-post:last-child { border-bottom: none; }
+    .rp-thumb { width: 56px; height: 56px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; background: linear-gradient(135deg, #C8EDEB, #85C1BF); }
+    .rp-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--teal); margin-bottom: 2rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+ 
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Omanyi<span>.</span>Media</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="landing.html" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+</nav>
+ 
+<div class="post-hero">
+  <div class="fade-up">
+    <span class="post-category">Video</span>
+    <h1>5 Signs Your Business Video Content Is Hurting You (And How to Fix It)</h1>
+    <div class="post-meta">
+      <span>✍️ Devan Okafor</span>
+      <span>📅 March 2026</span>
+      <span>⏱️ 9 min read</span>
+    </div>
+  </div>
+  <div class="post-visual fade-up delay-2">🎬</div>
+</div>
+ 
+<section class="section">
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+ 
+  <div class="article-layout">
+    <article>
+      <div class="keywords-strip">
+        <h4>🎯 Target Keywords</h4>
+        <div class="kw-list">
+          <span class="kw-pill">video production for business</span>
+          <span class="kw-pill">business video content</span>
+          <span class="kw-pill">video marketing small business</span>
+          <span class="kw-pill">professional video production</span>
+          <span class="kw-pill">video content strategy</span>
+        </div>
+      </div>
+ 
+      <p class="article-intro">Video is the most powerful form of content marketing available to small businesses today. It builds trust faster than any other medium, explains complex ideas simply, and drives engagement on every platform from your website to social media. But there is a catch: bad video content does not just fail to help you — it can actively damage your brand.</p>
+ 
+      <p>If you have ever cringed watching a competitor's amateur product demo or struggled through a shaky, poorly lit video testimonial, you already understand this intuitively. Now ask yourself: is your own video content making the same impression on potential customers?</p>
+ 
+      <p>Here are five warning signs that your business video content might be working against you — and what you can do to turn each one around.</p>
+ 
+      <!-- SIGN 1 -->
+      <div class="numbered-sign">
+        <div class="sign-num">01</div>
+        <div class="sign-body">
+          <h3>Your Videos Look Like They Were Filmed on a Lunch Break</h3>
+          <p>Poor lighting, shaky camera work, distracting backgrounds, and muffled audio are the hallmarks of rushed video production. Today's viewers are sophisticated — they consume professionally produced content constantly. When your business video looks amateur by comparison, it sends an unintentional message: you do not take quality seriously.</p>
+        </div>
+      </div>
+      <p>The fix does not require a Hollywood budget. It requires intention. Good lighting, a stable shot, clean audio, and a tidy background can transform a video from something that undermines your credibility to something that builds it. These are the fundamentals that professional video production gets right every time.</p>
+ 
+      <!-- SIGN 2 -->
+      <div class="numbered-sign">
+        <div class="sign-num">02</div>
+        <div class="sign-body">
+          <h3>Your Videos Have No Clear Purpose</h3>
+          <p>Every video you publish should have a single, clear objective. Is it to explain how a product works? Build trust through a customer testimonial? Drive traffic to a landing page? If you cannot answer that question in one sentence before you begin filming, your video will almost certainly be unfocused — and an unfocused video is one that viewers abandon within the first 30 seconds.</p>
+        </div>
+      </div>
+      <p>The fix: Define the goal first, build the script around that goal, and ensure every frame serves that single purpose. Cut anything that does not directly move the viewer closer to the intended action.</p>
+ 
+      <div class="pull-quote">
+        <p>The businesses that treat video content as a strategic investment — rather than an afterthought — are the ones building the strongest brands and the most loyal customer bases.</p>
+      </div>
+ 
+      <!-- SIGN 3 -->
+      <div class="numbered-sign">
+        <div class="sign-num">03</div>
+        <div class="sign-body">
+          <h3>You Never Include a Call to Action</h3>
+          <p>This is one of the most common and costly mistakes small businesses make with video content. You invest time and resources into creating a compelling video, a viewer watches the whole thing — and then nothing happens. No next step. No invitation. Just an awkward ending and a missed opportunity.</p>
+        </div>
+      </div>
+      <p>Every business video should include a clear, specific call to action. Visit this page. Book a free consultation. Download this guide. Subscribe for more tips. Tell the viewer exactly what you want them to do next, and make it easy for them to do it. Script your CTA before you script anything else.</p>
+ 
+      <!-- SIGN 4 -->
+      <div class="numbered-sign">
+        <div class="sign-num">04</div>
+        <div class="sign-body">
+          <h3>Your Videos Are Too Long</h3>
+          <p>There is a persistent myth among business owners that more information equals more value. In video marketing, the opposite is usually true. Longer videos face dramatically higher drop-off rates. Viewers are not passive — they are constantly deciding whether to keep watching or move on to something else.</p>
+        </div>
+      </div>
+      <p>Different video types have different optimal lengths, but as a general rule, the tighter and more focused your video, the more of it your audience will watch. Once your video is edited, ask whether each segment earns its time on screen. If a section does not add new value or move the narrative forward, cut it without hesitation.</p>
+ 
+      <!-- SIGN 5 -->
+      <div class="numbered-sign">
+        <div class="sign-num">05</div>
+        <div class="sign-body">
+          <h3>Your Branding Is Inconsistent or Absent</h3>
+          <p>Imagine a potential customer encounters three of your videos across different platforms. One has your logo. One does not. One uses your brand colors. One looks like a completely different company made it. Inconsistent branding fragments your identity and makes it harder for viewers to build a mental association between your video content and your business.</p>
+        </div>
+      </div>
+      <p>The fix: Develop simple brand guidelines for your video content — consistent use of your logo, a defined color palette, consistent fonts in titles and graphics, and a recognizable visual style. Apply these across every video, regardless of the platform or topic.</p>
+ 
+      <h2>The Bigger Picture: Video as a Business Investment</h2>
+ 
+      <p>The businesses that treat video content as a strategic investment — rather than an afterthought — are the ones building the strongest brands and the most loyal customer bases. Professional video production is not about vanity. It is about communicating your value clearly, building trust efficiently, and standing out in a crowded marketplace.</p>
+ 
+      <p>Whether you are looking to create a compelling brand video, a series of educational how-to content, customer testimonial videos, or short-form social media clips, the principles are the same: purpose-driven, well-produced, on-brand, and always with a clear next step for the viewer.</p>
+ 
+      <p>Small businesses that get this right do not just look more professional — they grow faster, attract better clients, and convert viewers into customers at a significantly higher rate.</p>
+ 
+      <!-- CTA -->
+      <div class="article-cta">
+        <h3>Is Your Video Content Working as Hard as It Should?</h3>
+        <p>Book a free video strategy session with the Omanyi Media team. We'll review your current content and show you exactly what a professional video production could do for your business — no commitment required.</p>
+        <a href="landing.html" class="btn-white">Book My Free Video Session →</a>
+      </div>
+    </article>
+ 
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-title">📋 Table of Contents</div>
+        <a href="#" class="toc-link">Sign 1: Looks Unprofessional</a>
+        <a href="#" class="toc-link">Sign 2: No Clear Purpose</a>
+        <a href="#" class="toc-link">Sign 3: No Call to Action</a>
+        <a href="#" class="toc-link">Sign 4: Too Long</a>
+        <a href="#" class="toc-link">Sign 5: Inconsistent Branding</a>
+        <a href="#" class="toc-link">Video as an Investment</a>
+      </div>
+ 
+      <div class="sidebar-card">
+        <div class="sidebar-title">📚 Related Article</div>
+        <div class="related-post">
+          <div class="rp-thumb">🌐</div>
+          <div>
+            <div class="rp-title">Why Your Small Business Needs a Professional Website in 2026</div>
+            <div style="margin-top:0.3rem;"><a href="blog-post-1.html" style="color:var(--teal);font-size:0.78rem;font-weight:600;">Read Article →</a></div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="sidebar-card" style="background:var(--teal);border-color:var(--teal);color:white;">
+        <div class="sidebar-title" style="color:rgba(255,255,255,0.8);">🎬 Video Package</div>
+        <p style="font-size:0.85rem;line-height:1.6;margin-bottom:1rem;opacity:0.85;">Starting at <strong>$500</strong> for a social media reel pack. Professional, on-brand, and built for results.</p>
+        <a href="landing.html" class="btn-white" style="font-size:0.85rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Get a Quote →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+ 
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo">Omanyi<span>.</span>Media</a>
+      <p class="footer-tagline">Professional websites and video content for small businesses across Canada and the United States.</p>
+      <div class="social-row">
+        <div class="social-btn">f</div><div class="social-btn">in</div>
+        <div class="social-btn">li</div><div class="social-btn">▶</div><div class="social-btn">𝕏</div>
+      </div>
+    </div>
+    <div><div class="footer-col-title">Company</div>
+      <ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div><div class="footer-col-title">Services</div>
+      <ul class="footer-links"><li><a href="services.html">Website Building</a></li><li><a href="services.html">Video Production</a></li><li><a href="landing.html">Free Consultation</a></li></ul>
+    </div>
+    <div><div class="footer-col-title">Contact</div>
+      <ul class="footer-links"><li><a href="mailto:hello@omanyi.media">hello@omanyi.media</a></li><li><a href="tel:+14165550192">+1 (416) 555-0192</a></li><li><a href="#">200 Wellington St W, Toronto ON</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Omanyi Media. All rights reserved.</span><span>Toronto, Ontario · Canada</span></div>
+</footer>
+<div class="disclaimer-bar">The information provided on this website is intended for educational purposes only. While every effort has been made to ensure the accuracy and reliability of the content, the university does not guarantee its completeness or effectiveness. This website will be deactivated once the course is completed. Some images used on this site have been sourced from the internet and are included for educational and practice purposes only. If you are the copyright owner of any image and believe it has been used without proper attribution, please contact us, and we will make the necessary corrections. The views expressed on this site do not necessarily reflect the official policies or positions of the university. The university is not responsible for any errors or omissions or the results obtained from using this information. By using this website, you acknowledge and agree to these terms.</div>
+<script src="js/main.js"></script>
+</body>
+</html>
