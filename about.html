@@ -24,7 +24,7 @@
     }
     .page-hero p {
       font-size: 1.1rem; font-weight: 300;
-      line-height: 1.8; opacity: 0.85; max-width: 480px;
+      line-height: 1.8; opacity: 0.85; max-width: 480px;  color: rgba(255,255,255,0.85);
     }
     .hero-badge-row {
       display: flex; gap: 1rem; flex-wrap: wrap;
@@ -40,6 +40,17 @@
     .hero-right-stat {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
     }
+.hero-img-wrap {
+  grid-column: span 2;
+}
+
+.hero-img-wrap img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
     .stat-box {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.2);
@@ -117,6 +128,8 @@
       height: 220px; display: flex; align-items: center; justify-content: center;
       font-size: 5rem;
     }
+
+
     .team-img.c1 { background: linear-gradient(135deg, #E6F4F3, #B2DFDB); }
     .team-img.c2 { background: linear-gradient(135deg, #FFF8E6, #FFE0B2); }
     .team-img.c3 { background: linear-gradient(135deg, #EDE7F6, #D1C4E9); }
@@ -184,7 +197,10 @@
     <div class="stat-box"><div class="stat-big">5</div><div class="stat-lbl">Years in Business</div></div>
     <div class="stat-box"><div class="stat-big">3wk</div><div class="stat-lbl">Avg. Site Delivery</div></div>
     <div class="stat-box"><div class="stat-big">98%</div><div class="stat-lbl">Client Satisfaction</div></div>
+    <div class="hero-img-wrap">
+    <img src="images/about.jpg" alt="Team working together" />
   </div>
+</div>
 </section>
  
 <!-- MISSION -->
