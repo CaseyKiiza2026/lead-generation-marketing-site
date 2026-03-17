@@ -8,107 +8,7 @@ Copy
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>5 Signs Your Business Video Content Is Hurting You — Omanyi Media</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .post-hero {
-      padding-top: var(--nav-h);
-      background: linear-gradient(135deg, #FFF3D4 0%, #F5D98A 100%);
-      padding: calc(var(--nav-h) + 4rem) 6% 5rem;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
-    .post-category {
-      background: var(--gold); color: var(--ink);
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; font-family: 'DM Mono', monospace;
-      padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block;
-      margin-bottom: 1rem;
-    }
-    .post-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900; line-height: 1.15; letter-spacing: -0.025em;
-      color: var(--ink); margin-bottom: 1rem;
-    }
-    .post-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--ink-soft); }
-    .post-meta span { display: flex; align-items: center; gap: 0.35rem; }
-    .post-visual {
-      background: white; border-radius: 20px; height: 320px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 6rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-    }
- 
-    /* ── ARTICLE ── */
-    .article-layout { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start; }
-    article { max-width: 100%; }
-    .article-intro {
-      font-size: 1.15rem; font-weight: 400; color: var(--ink-soft);
-      line-height: 1.85; margin-bottom: 2.5rem;
-      padding-bottom: 2.5rem; border-bottom: 1px solid var(--border);
-    }
-    article h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem; font-weight: 700; color: var(--ink);
-      margin: 2.5rem 0 1rem; letter-spacing: -0.015em;
-    }
-    article p { font-size: 1.02rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 1.25rem; }
-    article ul { padding-left: 1.25rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
-    article ul li { font-size: 0.97rem; color: var(--ink-soft); line-height: 1.75; }
- 
-    .numbered-sign {
-      display: flex; align-items: flex-start; gap: 1.5rem;
-      background: var(--mist); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.75rem; margin: 2.5rem 0;
-    }
-    .sign-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem; font-weight: 900; color: var(--teal);
-      line-height: 1; flex-shrink: 0;
-    }
-    .sign-body h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem; font-weight: 700; color: var(--ink);
-      margin-bottom: 0.5rem;
-    }
-    .sign-body p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.75; margin: 0; }
- 
-    .pull-quote {
-      background: #FFF8E6; border-left: 4px solid var(--gold);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 1.5rem 2rem; margin: 2rem 0;
-    }
-    .pull-quote p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem; font-style: italic; color: var(--ink);
-      line-height: 1.55; margin: 0;
-    }
- 
-    .keywords-strip {
-      background: var(--mist); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.25rem; margin-bottom: 2.5rem;
-    }
-    .keywords-strip h4 { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.6rem; }
-    .kw-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .kw-pill { background: white; border: 1px solid var(--border); color: var(--ink-soft); font-size: 0.78rem; padding: 0.28rem 0.7rem; border-radius: 20px; }
- 
-    .article-cta {
-      background: var(--teal-dark); color: white;
-      border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem;
-    }
-    .article-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
-    .article-cta p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 300; }
- 
-    .sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
-    .sidebar-card { background: var(--mist); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
-    .sidebar-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem; color: var(--ink); }
-    .toc-link { display: block; font-size: 0.85rem; color: var(--ink-soft); padding: 0.4rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
-    .toc-link:last-child { border-bottom: none; }
-    .toc-link:hover { color: var(--teal); }
-    .related-post { display: flex; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
-    .related-post:last-child { border-bottom: none; }
-    .rp-thumb { width: 56px; height: 56px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; background: linear-gradient(135deg, #C8EDEB, #85C1BF); }
-    .rp-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--teal); margin-bottom: 2rem; }
-    .back-link:hover { text-decoration: underline; }
-  </style>
+  
 </head>
 <body>
  
@@ -134,7 +34,7 @@ Copy
       <span>⏱️ 9 min read</span>
     </div>
   </div>
-  <div class="post-visual fade-up delay-2">🎬</div>
+  <img src="images/blog-post-2i.jpg" alt="Video production and filming setup for marketing content" class="post-main-img">
 </div>
  
 <section class="section">

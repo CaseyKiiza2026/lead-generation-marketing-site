@@ -652,6 +652,63 @@ article h2 {
       padding: calc(var(--nav-h) + 4rem) 6% 5rem;
       display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
     }
+    .hero-bg-websites {
+  background-image: url("../images/blog-post-1i.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.post-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.post-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 750px;
+}
+
+.post-category-light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.post-hero-title-light {
+  color: #ffffff;
+  margin: 0 0 20px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.post-meta-light {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.post-meta-light span {
+  color: rgba(255,255,255,0.85);
+}
     .post-category {
       background: var(--teal); color: white;
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
