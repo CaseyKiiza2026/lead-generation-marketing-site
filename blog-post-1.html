@@ -5,132 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Your Small Business Needs a Professional Website in 2026 — Omanyi Media</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .post-hero {
-      padding-top: var(--nav-h);
-      background: linear-gradient(135deg, #C8EDEB 0%, #85C1BF 100%);
-      padding: calc(var(--nav-h) + 4rem) 6% 5rem;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
-    .post-category {
-      background: var(--teal); color: white;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; font-family: 'DM Mono', monospace;
-      padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block;
-      margin-bottom: 1rem;
-    }
-    .post-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900; line-height: 1.15; letter-spacing: -0.025em;
-      color: var(--ink); margin-bottom: 1rem;
-    }
-    .post-meta {
-      display: flex; gap: 1.5rem; flex-wrap: wrap;
-      font-size: 0.85rem; color: var(--ink-soft);
-    }
-    .post-meta span { display: flex; align-items: center; gap: 0.35rem; }
-    .post-visual {
-      background: white; border-radius: 20px;
-      height: 320px; display: flex; align-items: center; justify-content: center;
-      font-size: 6rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-    }
-
-    /* ── ARTICLE ── */
-    .article-layout {
-      display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start;
-    }
-
-    article { max-width: 100%; }
-    .article-intro {
-      font-size: 1.15rem; font-weight: 400; color: var(--ink-soft);
-      line-height: 1.85; margin-bottom: 2.5rem;
-      padding-bottom: 2.5rem; border-bottom: 1px solid var(--border);
-    }
-    article h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem; font-weight: 700;
-      color: var(--ink); margin: 2.5rem 0 1rem; letter-spacing: -0.015em;
-    }
-    article p {
-      font-size: 1.02rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 1.25rem;
-    }
-    article ul {
-      padding-left: 1.25rem; margin-bottom: 1.5rem;
-      display: flex; flex-direction: column; gap: 0.6rem;
-    }
-    article ul li { font-size: 0.97rem; color: var(--ink-soft); line-height: 1.75; }
-
-    .pull-quote {
-      background: var(--teal-pale); border-left: 4px solid var(--teal);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 1.5rem 2rem; margin: 2rem 0;
-    }
-    .pull-quote p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem; font-style: italic; color: var(--teal-dark);
-      line-height: 1.55; margin: 0;
-    }
-
-    .keywords-strip {
-      background: var(--mist); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.25rem;
-      margin-bottom: 2.5rem;
-    }
-    .keywords-strip h4 { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.6rem; }
-    .kw-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .kw-pill {
-      background: white; border: 1px solid var(--border);
-      color: var(--ink-soft); font-size: 0.78rem;
-      padding: 0.28rem 0.7rem; border-radius: 20px;
-    }
-
-    /* ── CTA BOX ── */
-    .article-cta {
-      background: var(--teal); color: white;
-      border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem;
-    }
-    .article-cta h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;
-    }
-    .article-cta p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 300; }
-
-    /* ── SIDEBAR ── */
-    .sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
-    .sidebar-card {
-      background: var(--mist); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem;
-    }
-    .sidebar-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem; color: var(--ink); }
-    .toc-link {
-      display: block; font-size: 0.85rem; color: var(--ink-soft);
-      padding: 0.4rem 0; border-bottom: 1px solid var(--border);
-      transition: color 0.2s;
-    }
-    .toc-link:last-child { border-bottom: none; }
-    .toc-link:hover { color: var(--teal); }
-    .related-post {
-      display: flex; gap: 0.75rem; padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .related-post:last-child { border-bottom: none; }
-    .rp-thumb {
-      width: 56px; height: 56px; border-radius: 10px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem;
-      background: linear-gradient(135deg, #FFF3D4, #F5D98A);
-    }
-    .rp-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
-    .rp-cat { font-size: 0.75rem; color: var(--teal); margin-top: 0.2rem; }
-
-    .back-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.85rem; font-weight: 600; color: var(--teal);
-      margin-bottom: 2rem;
-    }
-    .back-link:hover { text-decoration: underline; }
-  </style>
+  
 </head>
 <body>
 
@@ -182,7 +57,7 @@
 
       <p>This is not an exaggeration. Studies consistently show that over 80% of consumers research a business online before making a purchase or booking a service. If they land on a poorly designed site — or worse, find nothing at all — they move on to your competitor in seconds.</p>
 
-      <h2>The Digital Storefront: Your First Impression Happens Online</h2>
+      <h2 id="digital-storefront">The Digital Storefront: Your First Impression Happens Online</h2>
 
       <p>Think about the last time you visited a new restaurant or hired a contractor. Chances are, you looked them up online first. You checked their website, scanned their photos, maybe read a review or two. Your potential customers are doing exactly the same thing when they hear about your business.</p>
 
@@ -194,7 +69,7 @@
 
       <p>But not just any website will do. A poorly built website can actually hurt you more than having no website at all. Slow load times, broken links, confusing navigation, and low-quality images signal to visitors — and to Google — that your business is not to be taken seriously.</p>
 
-      <h2>What Makes a Website 'Professional'?</h2>
+      <h2 id="professional-website">What Makes a Website 'Professional'?</h2>
 
       <p>Many small business owners assume that building a professional website requires a large budget or advanced technical skills. That is no longer true. What it does require is intentional design and clear communication. Here are the core elements every professional small business website should include:</p>
 
@@ -207,15 +82,15 @@
         <li><strong>Trust signals:</strong> Testimonials, case studies, certifications, and professional photos all help build credibility and reduce purchase hesitation.</li>
       </ul>
 
-      <h2>The SEO Advantage: Getting Found on Google</h2>
+      <h2 id="seo-advantage">The SEO Advantage: Getting Found on Google</h2>
 
       <p>Beyond impressing your existing audience, a well-built website is one of the most powerful tools for attracting new customers through search engines. Search Engine Optimization (SEO) is the practice of structuring and writing your website so that Google ranks it higher when people search for services like yours.</p>
 
       <p>For a local bakery, that might mean showing up when someone searches "best bakery in [your city]." For a plumber, it could mean appearing for "emergency plumber near me." The businesses that dominate those local search results are capturing customers who are actively ready to spend money right now.</p>
 
       <p>Good SEO starts with a professional website. That means clean code, fast load speeds, descriptive page titles and headings, well-written content, and relevant keywords woven naturally throughout your site — exactly like the target keywords listed at the top of this article.</p>
-
-      <h2>The Cost of Not Having a Website</h2>
+       
+      <h2 id="cost">The Cost of Not Having a Website</h2>
 
       <p>Some small business owners rely on social media instead of a website. While platforms like Instagram and Facebook are valuable tools for engagement and discovery, they carry significant risks as a primary online presence:</p>
 
@@ -227,7 +102,7 @@
 
       <p>A website, on the other hand, is a digital asset you own. It compounds in value over time as your content grows, your SEO improves, and your brand becomes more established online.</p>
 
-      <h2>Getting Started Does Not Have to Be Overwhelming</h2>
+      <h2 id="getting-started">Getting Started Does Not Have to Be Overwhelming</h2>
 
       <p>The biggest barrier most small business owners face is not the cost — it is knowing where to start. Working with a professional media company that specializes in website design for small businesses means you get expert guidance throughout the entire process, from choosing your domain name and structuring your pages to writing copy that converts visitors into customers.</p>
 
@@ -247,11 +122,11 @@
     <aside class="sidebar">
       <div class="sidebar-card">
         <div class="sidebar-title">📋 Table of Contents</div>
-        <a href="#" class="toc-link">The Digital Storefront</a>
-        <a href="#" class="toc-link">What Makes a Website Professional</a>
-        <a href="#" class="toc-link">The SEO Advantage</a>
-        <a href="#" class="toc-link">Cost of Not Having a Website</a>
-        <a href="#" class="toc-link">Getting Started</a>
+        <a href="#digital-storefront" class="toc-link">The Digital Storefront</a>
+        <a href="#professional-website" class="toc-link">What Makes a Website Professional</a>
+        <a href="#seo-advantage" class="toc-link">The SEO Advantage</a>
+        <a href="#cost" class="toc-link">Cost of Not Having a Website</a>
+        <a href="#getting-started" class="toc-link">Getting Started</a>
       </div>
 
       <div class="sidebar-card">
