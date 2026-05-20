@@ -91,61 +91,100 @@
   .beliefs-grid { grid-template-columns: 1fr; }
 }
 
-/* ── WHY EARLY ─────────────────────────────────────────────── */
-.why-early {
+/* ── WHO WE ARE (founders) ─────────────────────────────────── */
+.who {
   background: var(--ink-900);
   color: var(--paper);
   position: relative;
   overflow: hidden;
 }
-.why-early::before {
+.who::before {
   content: '';
   position: absolute; inset: 0;
   background: radial-gradient(700px 500px at 100% 0%, rgba(107,162,146,0.12), transparent 60%);
   pointer-events: none;
 }
-.why-grid {
+.who-grid {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: start;
 }
-.why-list { display: flex; flex-direction: column; gap: 0; }
-.why-item {
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--ink-700);
+.who-intro .lede { color: var(--ink-300); max-width: none; }
+.who-intro p { color: var(--ink-300); }
+
+.founder-list {
   display: flex;
+  flex-direction: column;
   gap: 1.25rem;
-  align-items: flex-start;
 }
-.why-item:last-child { border-bottom: 1px solid var(--ink-700); }
-.why-mark {
+.founder-card {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--ink-700);
+  border-radius: var(--radius-l);
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.founder-card:hover {
+  border-color: var(--green-500);
+  background: rgba(107,162,146,0.06);
+}
+.founder-photo {
+  flex-shrink: 0;
+  width: 84px; height: 84px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--green-600), var(--ink-700));
+  display: grid;
+  place-items: center;
+}
+.founder-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.founder-initials {
   font-family: var(--font-display);
   font-size: 1.6rem;
-  color: var(--green-500);
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.why-item h4 {
-  color: var(--paper);
-  font-size: 1.1rem;
   font-weight: 500;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.35rem;
-  font-family: var(--font-display);
+  color: var(--paper);
+  letter-spacing: 0.02em;
 }
-.why-item p {
+.founder-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--paper);
+  margin-bottom: 0.2rem;
+}
+.founder-role {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-400);
+  margin-bottom: 0.6rem;
+}
+.founder-info p {
+  font-size: 0.92rem;
   color: var(--ink-300);
-  font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.6;
   margin: 0;
 }
 
 @media (max-width: 880px) {
-  .why-grid { grid-template-columns: 1fr; }
+  .who-grid { grid-template-columns: 1fr; }
 }
+@media (max-width: 420px) {
+  .founder-card { flex-direction: column; align-items: flex-start; text-align: left; }
+}
+
 
 /* ── CTA STRIP (lighter version) ───────────────────────────── */
 .cta-strip {
