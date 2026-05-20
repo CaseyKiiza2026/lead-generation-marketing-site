@@ -260,62 +260,108 @@
 
 /* ── PROCESS ───────────────────────────────────────────────── */
 .process {
-  background: var(--ink-900);
+  background: linear-gradient(180deg, #04111f 0%, #071827 100%);
   color: var(--paper);
   position: relative;
   overflow: hidden;
+  padding: 8rem 0;
 }
+
 .process::before {
   content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(900px 500px at 80% 0%, rgba(107,162,146,0.10), transparent 70%);
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    900px 500px at 80% 0%,
+    rgba(143, 227, 207, 0.14),
+    transparent 70%
+  );
   pointer-events: none;
 }
-.process .section-head { position: relative; }
+
+.process .section-head {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+
+.process .section-head h2 {
+  color: var(--paper);
+  opacity: 1;
+}
+
+.process .lede {
+  color: rgba(248, 250, 252, 0.72);
+}
+
 .process-list {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
+
 .process-step {
-  background: var(--ink-800);
-  border: 1px solid var(--ink-700);
+  background: rgba(11, 26, 42, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-l);
-  padding: 2rem;
+  padding: 2.25rem;
   position: relative;
-  transition: transform 0.4s var(--ease), border-color 0.3s var(--ease);
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
 }
+
 .process-step:hover {
-  transform: translateY(-4px);
-  border-color: var(--green-600);
+  transform: translateY(-6px);
+  border-color: rgba(143, 227, 207, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
+
 .process-step .step-num {
   font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 4rem;
+  font-weight: 600;
   font-variation-settings: "opsz" 144;
-  color: var(--green-500);
+  color: #8fe3cf;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   display: block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
+
 .process-step h3 {
-  color: var(--paper);
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
-  font-weight: 500;
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
+
 .process-step p {
-  color: var(--ink-300);
-  font-size: 0.94rem;
-  line-height: 1.65;
+  color: rgba(248, 250, 252, 0.72);
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 @media (max-width: 880px) {
-  .process-list { grid-template-columns: 1fr; }
+  .process {
+    padding: 5rem 0;
+  }
+
+  .process-list {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    padding: 1.75rem;
+  }
+
+  .process-step .step-num {
+    font-size: 3.25rem;
+  }
 }
 
 /* ── WORK / EXAMPLE DESIGNS ────────────────────────────────── */
